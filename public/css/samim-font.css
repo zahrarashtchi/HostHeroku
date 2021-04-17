@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'samim';
+    src: url('fonts/Samim.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/Samim.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/Samim.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/Samim.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Samim.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+    src: url('fonts/Samim-Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/Samim-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/Samim-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/Samim-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Samim-Bold.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    src: url('fonts/Samim-Medium.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/Samim-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/Samim-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/Samim-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/Samim-Medium.ttf') format('truetype');
+    /* Safari, Android, iOS */
+}

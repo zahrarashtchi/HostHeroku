@@ -1,0 +1,71 @@
+:root {
+    --darkGreen: #509753;
+    --lightGreen: #28cd34;
+}
+
+.form-container {
+    height: 100vh;
+}
+
+body {
+    background: url(../images/black.jpg) center center no-repeat;
+    background-size: cover;
+    font-family: samim;
+    direction: rtl;
+    color: var(--lightGreen);
+}
+
+.form-control {
+    background: transparent;
+    border: 2px solid var(--darkGreen);
+    height: 45px;
+    color: var(--lightGreen);
+}
+
+::placeholder {
+    color: var(--darkGreen) !important;
+}
+
+.form-header {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.form-control:focus {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border-color: var(--darkGreen);
+    color: var(--lightGreen);
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--darkGreen);
+}
+
+.btn {
+    background: var(--lightGreen);
+    padding: 11px 35px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.btn:hover {
+    border: none;
+    background: var(--darkGreen);
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none;
+}
+
+span.invalid-feedback {
+    text-align: right;
+}
