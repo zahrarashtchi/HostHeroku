@@ -28,6 +28,10 @@ class VerificationController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    public function show(){
+        return view('noora');
+    }
+
     /**
      * Create a new controller instance.
      *
