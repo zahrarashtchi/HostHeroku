@@ -39,6 +39,7 @@ class VerificationController extends Controller
      */
     public function show(Request $request)
     {
+        var_dump($request->all());
         return $request->user()->hasVerifiedEmail()
                         ? redirect($this->redirectPath())
                         : view('auth.verify')->with('email',$request->get('email'));
