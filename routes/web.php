@@ -15,7 +15,7 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    User::truncate();
+    return view('noora');
 });
 
 Auth::routes(['verify' => true]);
