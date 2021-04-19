@@ -29,7 +29,7 @@ class VerificationController extends Controller
     protected $redirectTo = RouteServiceProvider::HOME;
 
     public function show(){
-        return view('noora');
+        return view('auth.verify')->with('email',request()->email);
     }
 
     /**
