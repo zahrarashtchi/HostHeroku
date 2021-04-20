@@ -32,20 +32,6 @@ class VerificationController extends Controller
 
 
     /**
-     * Show the email verification notice.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\View\View
-     */
-    public function show(Request $request)
-    {
-        var_dump($request->all());
-        return $request->user()->hasVerifiedEmail()
-                        ? redirect($this->redirectPath())
-                        : view('auth.verify')->with('email',$request->get('email'));
-    }
-
-    /**
      * Create a new controller instance.
      *
      * @return void
