@@ -74,3 +74,17 @@ a:hover {
 span.invalid-feedback {
     text-align: right;
 }
+
+.page-container {
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+p {
+    line-height: 1.9em;
+}
+
+.btn.btn-link {
+    background: transparent;
+    color: inherit;
+}

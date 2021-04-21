@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\NewMessage;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,12 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return User::all();
+    return view('auth.verify');
+});
+
+Route::get('test-mail',function(){
+    Notification::route('mail','zahrary7@gmail.com')->notify(new NewMessage());
+    return 'Sent';
 });
 
 Auth::routes(['verify' => true]);

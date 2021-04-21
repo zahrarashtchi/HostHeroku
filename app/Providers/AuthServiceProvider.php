@@ -4,6 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use App\Models\User;
+use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Lang;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -24,6 +28,13 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+        VerifyEmail::toMailUsing(function(User $user, string $verficationUrl){
+            return (new MailMessage)
+                ->subject('تایید ایمیل')
+                ->line('برای تایید ایمیل روی لینک زیر کلیک کنید.')
+                ->action('تایید',$verficationUrl)
+                ->line('اگر شما این حساب را ایجاد نکرده اید، این ایمیل را نادیده بگیرید.');
+        });
 
         //
     }

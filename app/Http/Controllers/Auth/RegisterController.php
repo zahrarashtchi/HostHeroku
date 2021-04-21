@@ -49,11 +49,21 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $messages= [
+            'required' => 'پر کردن این فیلد الزامی می باشد.',
+            'string' => 'این فیلد فقط میتواند شامل رشته باشد.',
+            'max' => 'حداکثر 255 کاراکتر میتوانید وارد کنید.',
+            'email' => 'ایمیل وارد شده معتبر نمی باشد.',
+            'unique' => 'این ایمیل از قبل موجود می باشد.',
+            'min' => 'حداقل 8 کاراکتر وارد کنید.',
+            'confirmed' => 'پسورد های وارد شده مطابقت ندارند.'
+        ];
+
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        ],$messages);
     }
 
     /**
