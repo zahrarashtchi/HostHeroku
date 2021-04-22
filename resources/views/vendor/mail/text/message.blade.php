@@ -1,7 +1,3 @@
-@component('mail::layout')
-    {{-- Header --}}
-
-    {{ auth()->user()->name }}
 
     {{-- Body --}}
     {{ $slot }}
