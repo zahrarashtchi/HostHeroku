@@ -1,4 +1,8 @@
-
+@component('mail::layout')
+{{-- Header --}}
+@slot('header')
+@endcomponent
+@endslot
 
 {{-- Body --}}
 {{ $slot }}
