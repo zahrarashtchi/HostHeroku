@@ -17,7 +17,7 @@ use App\Notifications\NewMessage;
 */
 
 Route::get('/', function () {
-    return view('auth.verify');
+   User::truncate();
 });
 
 Route::get('test-mail',function(){

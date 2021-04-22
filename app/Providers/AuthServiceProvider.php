@@ -30,10 +30,11 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
         VerifyEmail::toMailUsing(function(User $user, string $verficationUrl){
             return (new MailMessage)
+                ->greeting('')
                 ->subject('تایید ایمیل')
-                ->line('برای تایید ایمیل روی لینک زیر کلیک کنید.')
-                ->action('تایید',$verficationUrl)
-                ->line('اگر شما این حساب را ایجاد نکرده اید، این ایمیل را نادیده بگیرید.');
+                ->line('برای تایید ایمیل روی لینک زیر کلیک کنید. اگر شما این حساب را ایجاد نکرده اید، این ایمیل را نادیده بگیرید.')
+                ->action('تایید',$verficationUrl);
+                
         });
 
         //
