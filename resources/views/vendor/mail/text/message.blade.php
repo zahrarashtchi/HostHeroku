@@ -1,9 +1,7 @@
 @component('mail::layout')
     {{-- Header --}}
     @slot('header')
-        @component('mail::header', ['url' => config('app.url')])
-            {{ config('app.name') }}
-        @endcomponent
+        {{ auth()->user()->name . 'عزیز'}}
     @endslot
 
     {{-- Body --}}
