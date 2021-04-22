@@ -1,8 +1,7 @@
 @component('mail::layout')
     {{-- Header --}}
-    @slot('header')
-        {{ auth()->user()->name . 'عزیز'}}
-    @endslot
+
+    {{ auth()->user()->name }}
 
     {{-- Body --}}
     {{ $slot }}
