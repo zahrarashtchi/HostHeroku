@@ -25,7 +25,7 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    /*public function boot()
     {
         $this->registerPolicies();
         VerifyEmail::toMailUsing(function(User $user, string $verficationUrl){
@@ -38,5 +38,5 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         //
-    }
+    }*/
 }
