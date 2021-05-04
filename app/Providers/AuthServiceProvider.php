@@ -25,18 +25,29 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    /*public function boot()
+    public function boot()
     {
         $this->registerPolicies();
+
         VerifyEmail::toMailUsing(function(User $user, string $verficationUrl){
             return (new MailMessage)
                 ->greeting('   ')
                 ->subject('تایید ایمیل')
-                ->line('برای تایید ایمیل روی لینک زیر کلیک کنید. اگر شما این حساب را ایجاد نکرده اید، این ایمیل را نادیده بگیرید.')
+                ->line('برای تایید ایمیل روی لینک زیر کلیک کنید. اگر شما این حساب را ایجاد نکرده اید، این ایمیل را نادیده بگیرید.' . $user->email)
                 ->action('تایید',$verficationUrl);
                 
         });
 
-        //
-    }*/
+        /*$this->registerPolicies();
+        Gate::define('update-contact',function($user,$contact){
+            return $user->id === $contact->user_id;
+        });
+
+        Gate::define('add-contact-to-group',function($user,$contact,$group){
+            return $user->id == $contact->user_id && $user->id == $group->user_id;
+        });*/
+
+        
+        
+    }
 }
